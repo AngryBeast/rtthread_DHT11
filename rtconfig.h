@@ -102,6 +102,7 @@
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
+#define RT_USING_ADC
 #define RT_USING_SENSOR
 #define RT_USING_SENSOR_CMD
 

@@ -21,7 +21,11 @@
 /* defined the LED0 pin: PF9 */
 #define LED0_PIN    GET_PIN(F, 9)
 
-
+/*pin:  OLED:   SCL:PB6   SDA:PB7
+ *      DHT11:  DATA:PG9
+ *      8266    USART3: RX:PB10 TX:PB11
+ *      LIGHT:  ADC:    ADC1_IN5    PA5
+ */
 
 int main(void)
 {
@@ -30,14 +34,10 @@ int main(void)
     rt_pin_mode(LED0_PIN, PIN_MODE_OUTPUT);
 
 
-
-
 //    dht11_read_temp_sample();
 //    thread_oled();
 //    thread_mqtt();
 //    thread_onenet();
-
-
 
     while (count++)
     {
@@ -46,8 +46,6 @@ int main(void)
         rt_pin_write(LED0_PIN, PIN_LOW);
         rt_thread_mdelay(500);
     }
-
-
 
 
     return RT_EOK;
